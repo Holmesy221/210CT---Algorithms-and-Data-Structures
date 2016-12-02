@@ -1,0 +1,25 @@
+import random
+           
+def randomise(list):
+    """ Funtion to randomise a list """
+
+
+    for i in range(0, len(list)):  
+        j = random.randint(0,i) 
+        # Swap value at postition i with value of position j
+        iVal = list[i]  
+        jVal = list[j] 
+        list[i]= jVal
+        list[j] = iVal
+    return list
+
+#Test case Gives the list , outputs the original list and the new randomised list
+TestList = [1,2,3,4,5,6,7,8,9]
+print(TestList)
+print(randomise(TestList))
+
+
+
+
+
+## O(n) where n is the lenght of the list

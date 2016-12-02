@@ -1,0 +1,29 @@
+PsuedoCode:
+
+removeVowles(word)
+ if len(word) = 0:
+      return ""
+ else 
+      newWord <- word[2]
+      firstLetter <- word[1]
+      if firstLetter in "aeiouAEIOU"
+          return removeVowles(newWord)
+      else
+          return firstLetter + remove_vowles(newWord)
+
+Python:
+
+def remove_vowles(word):
+    """ Funtion to remove all vowles from a word """
+    if len(word) == 0:  # base case 
+        return ""
+    else:
+        newWord = word[1:] # every letter from one and upwards
+        firstLetter = word[0]
+        if firstLetter in "aeiouAEIOU": # chekcs for vowles 
+            return remove_vowles(newWord) #chop off first char, if it a vowel
+        else:
+            return firstLetter + remove_vowles(newWord) #keep the first char if not a vowel
+print(remove_vowles(""))
+print(remove_vowles("beautiful"))
+print(remove_vowles("BEAUTIFUL"))

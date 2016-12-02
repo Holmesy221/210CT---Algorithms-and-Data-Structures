@@ -1,3 +1,6 @@
+
+PsuedoCode:
+
 CheckNumber(number, divide):
     if n not = 1:
       return FALSE

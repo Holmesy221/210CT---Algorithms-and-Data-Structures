@@ -1,0 +1,29 @@
+Reverse(s):
+ words <- sentance.split(" ")
+ result <- ""
+   for i <- -1 to length(words)
+   result <-result  + words[i]
+   if i not = 0
+          <- result + " "
+return RESULT
+
+python: 
+
+def reverse(sentence):
+    """ Funtion to reverse words in a sentance """
+    words = sentence.split(" ")  
+    result = ""                        
+    for i in range(len(words) - 1, -1, -1): # iterate over words starting from (last)reverse order
+        result += words[i]                  # add words to result
+        if i != 0: 
+            result += " "                   # adds space if not last 
+    return result
+
+
+print(reverse("Lee is here")) # test
+
+
+
+#Big0 Notation is 0(n) 
+
+

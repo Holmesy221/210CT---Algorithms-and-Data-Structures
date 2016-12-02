@@ -1,0 +1,49 @@
+
+
+PsuedoCode
+nearestSquare(n)
+	finished <-false
+	i <- 1
+	result <- 0
+        while not finished
+		square <- i * i
+		differnce <- n - square
+		if difference >= 0
+		then 
+			result <- square
+		else
+			finished <- true
+		<-i+1
+	return result
+  
+  Python:
+  
+  def nearestSquare(n):
+    """ Funtion to find the nearest square number """
+
+    #initialise variables
+    finished = False
+    i = 1
+    result = 0
+
+    # Test the square of every number starting from 1, calculates the difference between the input and the square
+    while not finished:
+        square = i * i 
+        difference = n - square 
+        if difference >= 0:
+            result = square   # if the difference is 0 or positive , set the result to the this square number
+        else:                 # if the result is negative then exit loop 
+            finished = True
+        i+=1
+    return result
+print(nearestSquare(15))
+print(nearestSquare(16))
+print(nearestSquare(17))
+print(nearestSquare(8))
+print(nearestSquare(25))
+print(nearestSquare(5))
+
+
+# O(n) where n is the number of iterations of the while loop before the result is reached
+
+    

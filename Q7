@@ -1,0 +1,39 @@
+CheckNumber(number, divide):
+    if n not = 1:
+      return FALSE
+    else divide is = 1:
+         return TRUE
+    else number % divide is = 0:
+         return FALSE
+    else 
+         return (checknumber(number, divide -1))
+checkIfPrime(number):
+    return checkNumber(number, number -1)
+    
+    Python:
+    
+    def checkNumber(number,divide):
+    """ Function to check if a number is prime """
+    if number <= 1:  # base case 
+        return False
+    elif divide == 1:
+        return True
+    elif number % divide == 0: #check if got remainder , not prime if has no remainder
+        return False
+    else:
+        return (checkNumber(number, divide -1)) #calls itselfs , moves to base case
+
+# function to save passing two parameters
+def checkIfPrime(number):
+    return checkNumber(number, number -1)    
+
+#Check numbers to see if they are prime
+print(checkIfPrime(1))
+print(checkIfPrime(0))
+print(checkIfPrime(17))
+print(checkIfPrime(10))
+print(checkIfPrime(16))
+print(checkIfPrime(13))
+print(checkIfPrime(37))
+
+    

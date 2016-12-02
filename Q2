@@ -1,0 +1,16 @@
+def countTrailingZeros(number):
+    """ Recursive Funtion to count trailing zeroes"""
+    if number < 5: # base case
+        return 0
+    else:
+        return int(countTrailingZeros(number/5) + (number/5)) # calls itself
+
+#Test    
+print(countTrailingZeros(2))
+print(countTrailingZeros(5))
+print(countTrailingZeros(10))
+print(countTrailingZeros(25))
+print(countTrailingZeros(100))
+
+
+#0(2^n) where n is the number of recursive calls before result is returned

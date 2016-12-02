@@ -1,0 +1,51 @@
+PsuedoCode:
+
+binaryIntervalSearch(L, lower, upper)
+ startPoint <- 0
+ endPoint <- lengh(L) -1
+ found <- False
+
+ while startPoint <= endPoint and not found
+      middle = lenght(L)//2
+      if (L[middle] > lower) and :[middle] < upper)
+       then
+           found = True
+       else
+           if lower < L[middle]
+           then
+               endPoint = middle - 1
+       else
+            startPoint = middle + 1
+return FOUND
+
+
+def binaryIntervalSearch(L,lower,upper):
+    """ Adapted Binary search that outputs whether a specefic value between an interval was found """
+
+    #intialise Variables 
+    startPoint = 0
+    endPoint = len(L)-1
+    found = False
+    
+    while startPoint <= endPoint  and not found:
+        middle = len(L)//2  #middle Val
+
+        if (L[middle] > lower) and (L[middle] < upper): #if val > lower but < upper
+            found = True                                
+        else:
+            if lower < L[middle]:    
+                endPoint = middle - 1
+            else:
+                startPoint = middle + 1
+    return found
+
+
+#To test the search
+TestList = [1,2,4,6,8,9,10]
+print(binaryIntervalSearch(TestList,5,11))
+
+
+#BinarySearch Template taken from https://interactivepython.org/runestone/static/pythonds/SortSearch/TheBinarySearch.html
+# I asked if was allowed , said yes if referenced :)
+
+
